@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FormularioPersonagemActivity" >
+    tools:context=".ui.activities.FormularioPersonagemActivity" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:inputType="textPersonName"/>
 
         <EditText
-            android:id="@+id/edirText_altuta"
+            android:id="@+id/editText_altuta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
