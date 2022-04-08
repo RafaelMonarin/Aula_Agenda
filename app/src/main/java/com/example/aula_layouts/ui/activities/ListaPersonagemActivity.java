@@ -76,7 +76,7 @@ public class ListaPersonagemActivity extends AppCompatActivity {
     public boolean onContextItemSelected(@NonNull MenuItem item){
 
         int itemId = item.getItemId();
-        if(itemId == R.id.activity_lsita_personagem_menu_remover){
+        if(itemId == R.id.activity_lista_personagem_menu_remover){
             new AlertDialog.Builder(this)
                     .setTitle("Removendo Personagem")
                     .setMessage("Tem certeza que quer remover?")
