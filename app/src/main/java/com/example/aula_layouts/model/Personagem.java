@@ -6,11 +6,13 @@ import java.io.Serializable;
 
 public class Personagem implements Serializable {
 
+    //Declaração das variáveis dos dados dos personagens.
     private String nome;
     private String altura;
     private String nascimento;
     private int id = 0;
 
+    //Método que recebe variáveis do mesmo tipo criadas anteriormente para poder salva-las na classe.
     public Personagem(String nome, String altura, String nascimento){
 
         this.nome = nome;
@@ -22,6 +24,7 @@ public class Personagem implements Serializable {
 
     }
 
+    //Métodos que seta as variáveis que podem ser acessados em outro código.
     public void setNome(String nome) { this.nome = nome;}
 
     public void setAltura(String altura) { this.altura = altura;}
