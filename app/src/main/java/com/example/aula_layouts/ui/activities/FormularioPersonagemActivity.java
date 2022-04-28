@@ -37,7 +37,8 @@ public class FormularioPersonagemActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.activity_formulario_personagem_menu_salvar, menu);
         return super.onCreateOptionsMenu(menu);
     }
-    //
+
+    // Sobrepoe o onOptionsItemSelected da classe pai, passa o id e retorna item.
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
         int itemId = item.getItemId();
@@ -46,7 +47,8 @@ public class FormularioPersonagemActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    //
+
+    // Sobrepoe o método onCreate, chama a primeira tela e alguns métodos.
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -55,7 +57,8 @@ public class FormularioPersonagemActivity extends AppCompatActivity {
         carregaPersonagem();
         //checaPermissoes();
     }
-    //
+
+    // Método que carrega os personagens criados.
     private void carregaPersonagem(){
         Intent dados = getIntent();
         if(dados.hasExtra(CHAVE_PERSONAGEM)){
@@ -67,13 +70,15 @@ public class FormularioPersonagemActivity extends AppCompatActivity {
             personagem = new Personagem();
         }
     }
-    //
+
+    // Método que passa os dados preenchidos para a classe Personagem.
     private void preencheCampos(){
         campoNome.setText(personagem.getNome());
         campoAltura.setText(personagem.getAltura());
         campoNascimento.setText(personagem.getNascimento());
     }
-    //
+
+    // Método que finaliza salvando os dados.
     private void finalizarFormulario(){
         preencherPersonagem();
         if(personagem.IdValido()){
@@ -84,7 +89,8 @@ public class FormularioPersonagemActivity extends AppCompatActivity {
         }
         finish();
     }
-    //
+
+    // Método que busca os campos criados no xml e atribui eles as variáveis de campo de textos, formata os inputs de textos.
     private void inicializacaoCampos(){
         campoNome = findViewById(R.id.editText_nome);
         campoAltura = findViewById(R.id.editText_altuta);
@@ -98,7 +104,8 @@ public class FormularioPersonagemActivity extends AppCompatActivity {
         MaskTextWatcher mtwNascimento = new MaskTextWatcher(campoNascimento, smfNascimento);
         campoNascimento.addTextChangedListener(mtwNascimento);
     }
-    //
+
+    // Método que passa os dados inputados pelo usuário para a classe Personagem.
     private void preencherPersonagem(){
         String nome = campoNome.getText().toString();
         String altura = campoAltura.getText().toString();
