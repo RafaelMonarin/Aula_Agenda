@@ -12,8 +12,6 @@ import android.widget.EditText;
 import com.example.aula_layouts.R;
 import com.example.aula_layouts.dao.PersonagemDAO;
 import com.example.aula_layouts.model.Personagem;
-import com.github.rtoshiro.util.format.SimpleMaskFormatter;
-import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 
 import static com.example.aula_layouts.ui.activities.ConstatesActivities.CHAVE_PERSONAGEM;
 
@@ -96,13 +94,13 @@ public class FormularioPersonagemActivity extends AppCompatActivity {
         campoAltura = findViewById(R.id.editText_altuta);
         campoNascimento = findViewById(R.id.editText_nascimento);
 
-        SimpleMaskFormatter smfAltura = new SimpleMaskFormatter("N,NN");
+       /* SimpleMaskFormatter smfAltura = new SimpleMaskFormatter("N,NN");
         MaskTextWatcher mtwAltura = new MaskTextWatcher(campoAltura, smfAltura);
         campoAltura.addTextChangedListener(mtwAltura);
 
         SimpleMaskFormatter smfNascimento = new SimpleMaskFormatter("NN/NN/NNNN");
         MaskTextWatcher mtwNascimento = new MaskTextWatcher(campoNascimento, smfNascimento);
-        campoNascimento.addTextChangedListener(mtwNascimento);
+        campoNascimento.addTextChangedListener(mtwNascimento);*/
     }
 
     // Método que passa os dados inputados pelo usuário para a classe Personagem.
